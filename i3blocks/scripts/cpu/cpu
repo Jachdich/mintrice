@@ -1,0 +1,6 @@
+usage="$(~/.config/i3blocks/scripts/cpu/cpu_usage | grep -v '#')"
+colour="$(~/.config/i3blocks/scripts/cpu/cpu_usage | grep '#')"
+
+echo "${usage} @ $(~/.config/i3blocks/scripts/cpu/temperature)"
+echo 
+echo "${colour}"

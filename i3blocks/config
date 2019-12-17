@@ -1,0 +1,40 @@
+command=~/.config/i3blocks/scripts/$BLOCK_NAME/$BLOCK_NAME
+separator_block_width=8
+markup=pango
+
+[volume]
+label=🔊
+interval=once
+signal=11
+
+[wifi]
+label=📶
+interval=10
+
+[memory]
+command=free -m | python3 ~/.scripts/mem.py
+interval=2
+
+[cpu]
+interval=1
+label=💻
+
+[disk]
+interval=20
+command=df / -h | grep /dev | awk '{ print $4 ":" $5 }'
+
+[battery]
+#command=~/.scripts/measure_battery.sh | awk '{ print $1 "%" }'
+interval=10
+label=🔋
+
+[autostart]
+interval=once
+full_text=♿
+
+[calendar]
+label=📅
+interval=1
+
+[shutdown_menu]
+full_text=⏹
